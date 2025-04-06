@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Financial Calculator</h1>
+
+    <!-- Expense Calculator -->
+    <section id="expenses">
+      <h2>Expense Calculator</h2>
+      <div class="input-group">
+        <label>Category:</label>
+        <select id="category">
+          <option value="Food">Food</option>
+          <option value="Transport">Transport</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <input id="amount" type="number" placeholder="Enter amount">
+        <button onclick="addExpense()">Add</button>
+      </div>
+
+      <ul id="expenseList">
+        <!-- placeholder, will be deleted soon -->
+        <li>
+          <span>Food: Rp 100.000</span>
+          <button class="delete" onclick="deleteExpense()">X</button>
+        </li>
+        <!-- --------------------------------- -->
+      </ul>
+
+      <h3>Total Per Category:</h3>
+      <ul id="totalPerCategory"></ul>
+      <h3>Overall Total: <span id="overallTotal">0</span></h3>
+    </section>
+
+
+
+    <!-- Savings Estimation -->
+    <section id="savings">
+      <h2>Savings</h2>
+      <div class="input-group">
+        <input id="savingsAmount" type="number" placeholder="Enter savings amount">
+        <button onclick="addSavings()">Add</button>
+      </div>
+
+      <ul id="savingsList">
+        <!-- placeholder, will be deleted soon -->
+        <li>
+          <span>Rp 100.000</span>
+          <button class="delete" onclick="deleteSavings()">X</button>
+        </li>
+        <!-- --------------------------------- -->
+      </ul>
+
+      <h3>Total Savings: <span id="totalSavings">0</span></h3>
+      <h3>Remaining Savings After Expenses: <span id="remainingSavings">0</span></h3>
+    </section>
+
+
+
+    <!-- Debt Repayment Estimation -->
+    <section id="debt">
+      <h2>Debt Repayment Estimation</h2>
+      <div class="input-group">
+        <input type="number" id="totalDebt" placeholder="Total debt">
+        <input type="number" id="monthlyPayment" placeholder="Monthly payment">
+        <button onclick="calculateRepayment()">Calculate</button>
+      </div>
+
+      <h3>Estimated Repayment Time: <span id="repaymentMonths">0</span> Month</h3>
+    </section>
+  </div>
+</body>
+</html>
