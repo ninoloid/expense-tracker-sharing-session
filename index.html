@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Financial Calculator</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
   <div class="container">
@@ -43,14 +43,7 @@
         <button onclick="addSavings()">Add</button>
       </div>
 
-      <ul id="savingsList">
-        <!-- placeholder, will be deleted soon -->
-        <li>
-          <span>Rp 100.000</span>
-          <button class="delete" onclick="deleteSavings()">X</button>
-        </li>
-        <!-- --------------------------------- -->
-      </ul>
+      <ul id="savingsList"></ul>
 
       <h3>Total Savings: <span id="totalSavings">0</span></h3>
       <h3>Remaining Savings After Expenses: <span id="remainingSavings">0</span></h3>
@@ -71,6 +64,6 @@
     </section>
   </div>
 
-  <script src="script.js"></script>
+  <script src="scripts/script.js"></script>
 </body>
 </html>
